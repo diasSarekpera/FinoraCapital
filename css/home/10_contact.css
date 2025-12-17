@@ -1,0 +1,256 @@
+/* =======================================
+   CONTACT — FINORA CAPITAL
+======================================= */
+
+.contact {
+    width: 100%;
+    padding: 7rem 3rem;
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    color: #0f172a;
+    overflow: hidden;
+}
+
+/* ==============================
+   HEADER
+============================== */
+.contact-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-header {
+    margin: 0;
+}
+
+.contact-top p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #64748b;
+    max-width: 560px;
+}
+
+/* ==============================
+   CONTACT BOX
+============================== */
+
+.contact-box {
+    width: 100%;
+    max-width: 560px;
+    padding: 42px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    background: #f8fafc;
+    border-radius: 20px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+}
+
+/* ==============================
+   EMAIL
+============================== */
+
+.contact-email {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+    word-break: break-word;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* Soulignement élégant */
+.contact-email::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.contact-email:hover::after {
+    transform: scaleX(1);
+}
+
+/* ==============================
+   NOTE
+============================== */
+
+.contact-note {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #475569;
+    text-align: center;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 90px 20px;
+        gap: 55px;
+    }
+
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+
+    .contact-box {
+        padding: 36px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 70px 16px;
+    }
+
+    .contact-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-email {
+        font-size: 1.05rem;
+    }
+}
+
+
+/* ======================================
+   CONTACT — MOBILE FIRST REFINEMENT
+   À AJOUTER EN FIN DE FICHIER
+====================================== */
+
+/* ===== TABLET & SMALL LAPTOP ===== */
+@media (max-width: 900px) {
+
+    .contact {
+        padding: 6rem 2rem;
+        gap: 48px;
+    }
+
+    .contact-top p {
+        font-size: 0.95rem;
+        max-width: 520px;
+    }
+
+    .contact-box {
+        padding: 34px 28px;
+        border-radius: 18px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+    .contact {
+        padding: 5rem 1.2rem;
+        gap: 42px;
+    }
+
+    /* Header */
+    .contact-header h2 {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    .contact-top {
+        gap: 1.2rem;
+    }
+
+    .contact-top p {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        padding: 0 4px;
+    }
+
+    /* Contact box */
+    .contact-box {
+        padding: 28px 22px;
+        gap: 14px;
+        border-radius: 16px;
+    }
+
+    /* Désactiver l’effet hover inutile sur mobile */
+    .contact-box:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* Email */
+    .contact-email {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.4;
+        padding-bottom: 2px;
+    }
+
+    .contact-email::after {
+        height: 1.5px;
+    }
+
+    /* Note */
+    .contact-note {
+        font-size: 0.85rem;
+        line-height: 1.55;
+        padding: 0 6px;
+    }
+}
+
+/* ===== VERY SMALL DEVICES ===== */
+@media (max-width: 360px) {
+
+    .contact {
+        padding: 4.5rem 1rem;
+        gap: 36px;
+    }
+
+    .contact-header h2 {
+        font-size: 1.45rem;
+    }
+
+    .contact-top p {
+        font-size: 0.88rem;
+    }
+
+    .contact-box {
+        padding: 24px 18px;
+    }
+
+    .contact-email {
+        font-size: 0.95rem;
+    }
+
+    .contact-note {
+        font-size: 0.82rem;
+    }
+}
+
+
+
+
+

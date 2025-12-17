@@ -1,0 +1,316 @@
+/* =======================================
+   FOOTER — FINORA CAPITAL (PRO VERSION)
+======================================= */
+.footer {
+    width: 100%;
+    background: linear-gradient(180deg, #0f172a, #020617);
+    color: #e5e7eb;
+    padding: 90px 20px 40px;
+    overflow: hidden;
+}
+
+/* ==============================
+   CONTAINER
+============================== */
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+/* ==============================
+   BRAND
+============================== */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+}
+
+.footer-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.6px;
+}
+
+.footer-brand p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    max-width: 420px;
+    line-height: 1.6;
+    font-family: "Libre Baskerville", serif;
+}
+
+/* ==============================
+   FOOTER GRID (FLEX)
+============================== */
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* ==============================
+   COLUMN
+============================== */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 180px;
+}
+
+.footer-col h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    position: relative;
+    padding-left: 14px;
+}
+
+/* Barre décorative */
+.footer-col h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 4px;
+    height: 70%;
+    background: linear-gradient(180deg, #2563eb, #1d4ed8);
+    border-radius: 2px;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #cbd5f5;
+    transition: color 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Hover links */
+.footer-col a:hover {
+    color: #ffffff;
+    transform: translateX(6px);
+    opacity: 0.95;
+}
+
+/* ==============================
+   BOTTOM
+============================== */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 900px) {
+    .footer-grid {
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .footer-col {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col h3 {
+        padding-left: 0;
+    }
+
+    .footer-col h3::before {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 70px 20px 35px;
+    }
+
+    .footer-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-brand p {
+        font-size: 0.9rem;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+
+/* ======================================
+   FOOTER — MOBILE OPTIMISATION
+   À AJOUTER EN FIN DE FICHIER
+====================================== */
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+
+    .footer {
+        padding: 80px 18px 38px;
+    }
+
+    .footer .container {
+        gap: 60px;
+    }
+
+    .footer-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-header h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .footer-grid {
+        justify-content: center;
+        gap: 48px;
+    }
+
+    .footer-col {
+        min-width: unset;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col h3 {
+        padding-left: 0;
+    }
+
+    .footer-col h3::before {
+        display: none;
+    }
+
+    .footer-col ul {
+        align-items: center;
+    }
+
+    .footer-col a:hover {
+        transform: none;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 65px 14px 32px;
+    }
+
+    .footer .container {
+        gap: 50px;
+    }
+
+    /* Brand */
+    .footer-header h2 {
+        font-size: 1.55rem;
+        line-height: 1.25;
+    }
+
+    .footer-brand p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        padding: 0 6px;
+    }
+
+    /* Grid */
+    .footer-grid {
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .footer-col {
+        gap: 14px;
+    }
+
+    .footer-col h3 {
+        font-size: 0.95rem;
+    }
+
+    .footer-col a {
+        font-size: 0.9rem;
+    }
+
+    /* Bottom */
+    .footer-bottom {
+        padding-top: 24px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+/* ===== VERY SMALL DEVICES ===== */
+@media (max-width: 360px) {
+
+    .footer {
+        padding: 55px 12px 28px;
+    }
+
+    .footer-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .footer-brand p {
+        font-size: 0.85rem;
+    }
+
+    .footer-col h3 {
+        font-size: 0.9rem;
+    }
+
+    .footer-col a {
+        font-size: 0.88rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.78rem;
+    }
+}
+
+
+

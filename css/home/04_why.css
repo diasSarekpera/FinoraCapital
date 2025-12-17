@@ -1,0 +1,244 @@
+/* ==================================================
+   WHY CHOOSE US — PREMIUM & CLEAN DESIGN
+================================================== */
+
+.why-choose-us {
+    width: 100%;
+    padding: 7rem 3rem;
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    overflow: hidden;
+}
+
+.why-header{
+    margin: 0;
+}
+
+/* ==================================================
+   ROW / GRID
+================================================== */
+
+.why-row {
+    width: 100%;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.why-card {
+    background: #ffffff;
+    padding: 38px 34px;
+    border-radius: 22px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(59,130,246,0.06), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 80px rgba(15, 23, 42, 0.14);
+}
+
+.why-card:hover::before {
+    opacity: 1;
+}
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.why-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e3a8a;
+    letter-spacing: 0.5px;
+}
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.why-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.why-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.why-button {
+    padding: 16px 46px;
+    border-radius: 999px;
+    background: #1e3a8a;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.why-button:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(30, 58, 138, 0.35);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+    .why-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .why-card {
+        padding: 30px 26px;
+    }
+}
+
+
+
+
+
+
+/* ======================================
+   WHY CHOOSE US — MOBILE REFINEMENT
+   À AJOUTER EN FIN DE FICHIER
+====================================== */
+
+/* ===== TABLET & MOBILE ===== */
+@media (max-width: 768px) {
+
+    .why-choose-us {
+        padding: 4.5rem 1.5rem;
+        gap: 60px;
+    }
+
+    /* Grid */
+    .why-row {
+        gap: 26px;
+    }
+
+    /* Card */
+    .why-card {
+        padding: 34px 28px;
+        border-radius: 20px;
+    }
+
+    .why-title {
+        font-size: 17px;
+    }
+
+    .why-text {
+        font-size: 14.5px;
+        line-height: 1.65;
+    }
+
+    /* Button */
+    .why-button {
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+
+    .why-choose-us {
+        padding: 3.8rem 1.2rem;
+        gap: 52px;
+    }
+
+    /* Section header */
+    .why-header h2 {
+        font-size: 21px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .why-header .section-line {
+        width: 34px;
+    }
+
+    /* Grid → already 1 column, refine spacing */
+    .why-row {
+        gap: 22px;
+    }
+
+    /* Card */
+    .why-card {
+        padding: 28px 22px;
+        gap: 14px;
+    }
+
+    .why-title {
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    .why-text {
+        font-size: 14px;
+    }
+
+    /* Button full width */
+    .why-button-container {
+        width: 100%;
+    }
+
+    .why-button {
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+

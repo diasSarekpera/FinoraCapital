@@ -1,0 +1,401 @@
+/* =======================================
+   SECTION — LOAN FORM (MODERNE & ÉPURÉ)
+======================================= */
+.loan-form {
+    width: 100%;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0f172a;
+    overflow: hidden;
+}
+
+/* ==============================
+   HEADER
+============================== */
+.form-header {
+    text-align: center;
+    max-width: 720px;
+    margin-bottom: 60px;
+}
+
+.form-header h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.form-header p {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* ==============================
+   FORM CONTAINER
+============================== */
+.form-container {
+    width: 100%;
+    max-width: 920px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+}
+
+/* ==============================
+   FORM BLOCK
+============================== */
+.form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.form-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+    position: relative;
+    padding-left: 14px;
+}
+
+.form-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 4px;
+    height: 70%;
+    background: #2563eb;
+    border-radius: 2px;
+}
+
+/* ==============================
+   GROUPES
+============================== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Deux colonnes */
+.two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* ==============================
+   LABELS
+============================== */
+label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* ==============================
+   INPUT WRAPPER (ICÔNE + CHAMP)
+============================== */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    font-size: 1.1rem;
+    color: #64748b;
+    pointer-events: none;
+}
+
+/* ==============================
+   INPUTS & TEXTAREA
+============================== */
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 14px 16px 14px 46px; /* espace pour l’icône */
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #0f172a;
+    transition: all 0.25s ease;
+}
+
+.input-wrapper textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Placeholder */
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* Focus */
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.input-wrapper input:focus + .input-icon,
+.input-wrapper textarea:focus + .input-icon {
+    color: #2563eb;
+}
+
+/* ==============================
+   TEXTAREA WRAPPER
+============================== */
+.textarea-wrapper {
+    align-items: flex-start;
+}
+
+.textarea-wrapper .input-icon {
+    top: 16px;
+}
+
+/* ==============================
+   RADIO GROUP
+============================== */
+.radio-group {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.radio-group input {
+    accent-color: #2563eb;
+}
+
+.radio-group label:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+/* ==============================
+   SUBMIT
+============================== */
+.form-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.submit-button {
+    margin-top: 10px;
+    align-self: center;
+
+    padding: 16px 48px;
+    border-radius: 999px;
+    background: #1e3a8a;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(30, 58, 138, 0.35);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px 25px;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .form-header h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+/* ======================================
+   LOAN FORM — MOBILE OPTIMIZATION
+   À AJOUTER EN FIN DE FICHIER
+====================================== */
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+
+    .loan-form {
+        padding: 70px 16px;
+    }
+
+    .form-container {
+        padding: 36px 28px;
+        gap: 45px;
+        border-radius: 18px;
+    }
+
+    .form-title {
+        font-size: 1.25rem;
+    }
+
+    .form-group {
+        gap: 8px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    .input-wrapper input,
+    .input-wrapper textarea {
+        font-size: 0.95rem;
+        padding: 13px 14px 13px 44px;
+    }
+
+    .radio-group {
+        gap: 16px;
+    }
+
+    .radio-group label {
+        font-size: 0.9rem;
+        padding: 9px 12px;
+    }
+
+    .submit-button {
+        padding: 15px 44px;
+        font-size: 14.5px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+
+    .loan-form {
+        padding: 60px 14px;
+    }
+
+    /* Header */
+    .loan-form-header h2 {
+        font-size: 1.55rem;
+        text-align: center;
+        line-height: 1.25;
+    }
+
+    .loan-form-header .section-line {
+        width: 32px;
+    }
+
+    /* Container */
+    .form-container {
+        padding: 28px 20px;
+        gap: 40px;
+        border-radius: 16px;
+    }
+
+    /* Blocks */
+    .form-block {
+        gap: 22px;
+    }
+
+    .form-title {
+        font-size: 1.15rem;
+        padding-left: 12px;
+    }
+
+    .form-title::before {
+        width: 3px;
+    }
+
+    /* Inputs */
+    .input-wrapper input,
+    .input-wrapper textarea {
+        font-size: 0.9rem;
+        padding: 12px 14px 12px 42px;
+        border-radius: 9px;
+    }
+
+    .input-icon {
+        left: 14px;
+        font-size: 1rem;
+    }
+
+    /* Radio group stacked & thumb friendly */
+    .radio-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .radio-group label {
+        width: 100%;
+        justify-content: flex-start;
+        font-size: 0.9rem;
+    }
+
+    /* Submit button full width */
+    .submit-button {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
+
+/* ===== VERY SMALL DEVICES ===== */
+@media (max-width: 360px) {
+
+    .loan-form-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .form-container {
+        padding: 24px 16px;
+    }
+
+    .form-title {
+        font-size: 1.05rem;
+    }
+}
+
+
+
+
+

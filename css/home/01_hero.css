@@ -1,0 +1,662 @@
+/* ===============================
+   BASE
+================================ */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===============================
+           HERO SECTION
+================================ */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(15, 23, 42, 0.65),
+        rgba(15, 23, 42, 0.65)
+    ),
+    url("../../assets/images/hero/bg1.jpg") center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* ===============================
+              NAVBAR
+================================ */
+
+.navbar {
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Menu desktop */
+.menu ul {
+    display: flex;
+    gap: 32px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu a {
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    opacity: 1;
+}
+
+/* Contact button */
+.btn-contact {
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.btn-contact:hover {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+/* Burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+}
+
+.overlay-menu-mobile{
+    display: none;
+}
+
+/* ===============================
+           HERO CONTENT
+================================ */
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 28px;
+    width: 100%;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #facc15;
+}
+
+/* Decorative lines */
+.lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lines1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.lines2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.lines1 {
+    display: flex;
+    
+}
+
+.lines span {
+    height: 2px;
+    background: #facc15;
+}
+
+.first-line { width: 40px; }
+.second-line { width: 28px; opacity: 0.8; }
+.third-line { width: 52px; }
+
+/* Title */
+.hero-title {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    font-weight: 700;
+    max-width: 800px;
+}
+
+/* Values */
+.hero-values {
+    font-size: 13px;
+    letter-spacing: 2px;
+    opacity: 0.85;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.hero-buttons a {
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: #1e3a8a;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===============================
+           RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+    .menu,
+    .nav-contact {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .navbar {
+        position: relative;
+        top: 0;
+        z-index: 100;
+
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* === HERO DEPTH & TEXTURE === */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    pointer-events: none;
+}
+
+
+/* === HERO TITLE ENHANCEMENT === */
+.hero-title {
+    letter-spacing: -0.5px;
+}
+
+.hero-title br {
+    display: block;
+    margin-top: 6px;
+}
+
+/* === HERO VALUES STYLE === */
+.hero-values {
+    display: inline-block;
+    padding-left: 12px;
+    border-left: 2px solid rgba(250, 204, 21, 0.6);
+}
+
+
+/* === PRIMARY CTA BOOST === */
+.btn-primary {
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 15px 40px rgba(30, 58, 138, 0.45);
+}
+
+/* === HERO FADE-IN ANIMATION === */
+.hero-content {
+    animation: heroFadeUp 0.8s ease-out forwards;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === MICRO ALIGNMENT === */
+.hero-subtitle,
+.hero-values {
+    margin-left: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
+   HERO — MOBILE FIRST REFINEMENT
+   À AJOUTER À LA FIN DU CSS
+====================================== */
+
+/* ====== TABLET & MOBILE ====== */
+@media (max-width: 768px) {
+
+    /* ---------- HERO ---------- */
+    .hero {
+        min-height: 100svh;
+        background-position: center top;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .nav-content {
+        padding: 14px 18px;
+        border-radius: 12px;
+        margin-top: 16px;
+    }
+
+    .logo span {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 34px;
+    }
+
+    /* ---------- HERO CONTENT ---------- */
+    .hero-content {
+        padding-top: 60px;
+        gap: 22px;
+        align-items: flex-start;
+    }
+
+    /* Subtitle */
+    .hero-subtitle {
+        font-size: 0.85rem;
+        gap: 10px;
+    }
+
+    .lines span {
+        height: 2px;
+    }
+
+    .first-line { width: 28px; }
+    .second-line { width: 20px; }
+    .third-line { width: 36px; }
+
+    /* Title */
+    .hero-title {
+        font-size: clamp(1.9rem, 6vw, 2.5rem);
+        line-height: 1.25;
+        max-width: 100%;
+    }
+
+    /* Values */
+    .hero-values {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        padding-left: 10px;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        gap: 14px;
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        padding: 14px 22px;
+        font-size: 14px;
+    }
+}
+
+/* ====== SMALL MOBILE ====== */
+@media (max-width: 480px) {
+
+    /* Container tightening */
+    .container {
+        padding: 0 18px;
+    }
+
+    /* Navbar */
+    .nav-content {
+        padding: 12px 16px;
+        border-radius: 10px;
+    }
+
+    /* Hero content vertical rhythm */
+    .hero-content {
+        padding-top: 50px;
+        gap: 20px;
+    }
+
+    /* Subtitle simplification */
+    .hero-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 0.8px;
+    }
+
+    /* Title */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-title br {
+        margin-top: 4px;
+    }
+
+    /* Buttons full width already OK, better spacing */
+    .hero-buttons a {
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+}
+
+/* ====== OVERLAY MOBILE MENU ====== */
+@media (max-width: 900px) {
+
+    .overlay-menu-mobile {
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.96);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        list-style: none;
+        z-index: 90;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    /* À activer via JS : .overlay-menu-mobile.active */
+    .overlay-menu-mobile.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .overlay-menu-mobile a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+
+
+/* ======================================
+   BURGER ANIMATION
+====================================== */
+
+.burger {
+    position: relative;
+    z-index: 110;
+}
+
+.burger span {
+    transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+/* État actif */
+.burger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Prevent scroll when menu open */
+body.menu-open {
+    overflow: hidden;
+}
+
+
+
+/* ======================================
+   OVERLAY MENU — PREMIUM ANIMATION
+====================================== */
+
+@media (max-width: 900px) {
+
+    .overlay-menu-mobile {
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.97);
+        backdrop-filter: blur(14px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        list-style: none;
+        z-index: 95;
+
+        /* État fermé */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.45s ease,
+            transform 0.45s ease,
+            visibility 0s linear 0.45s;
+    }
+
+    /* État ouvert */
+    .overlay-menu-mobile.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+
+        transition:
+            opacity 0.45s ease,
+            transform 0.45s ease,
+            visibility 0s;
+    }
+
+    /* Liens */
+    .overlay-menu-mobile li {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+            opacity 0.45s ease,
+            transform 0.45s ease;
+    }
+
+    /* Apparition en cascade */
+    .overlay-menu-mobile.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stagger (effet premium) */
+    .overlay-menu-mobile.active li:nth-child(1) { transition-delay: 0.10s; }
+    .overlay-menu-mobile.active li:nth-child(2) { transition-delay: 0.18s; }
+    .overlay-menu-mobile.active li:nth-child(3) { transition-delay: 0.26s; }
+    .overlay-menu-mobile.active li:nth-child(4) { transition-delay: 0.34s; }
+    .overlay-menu-mobile.active li:nth-child(5) { transition-delay: 0.42s; }
+
+    .overlay-menu-mobile a {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        text-decoration: none;
+        position: relative;
+    }
+
+    /* Soulignement élégant au hover */
+    .overlay-menu-mobile a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #2563eb, #1d4ed8);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+    }
+
+    .overlay-menu-mobile a:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+
+
+/* ======================================
+   BURGER — PREMIUM TOGGLE
+====================================== */
+
+.burger {
+    position: relative;
+    z-index: 110;
+}
+
+.burger span {
+    transition:
+        transform 0.35s ease,
+        opacity 0.25s ease;
+}
+
+.burger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Bloque le scroll quand menu ouvert */
+body.menu-open {
+    overflow: hidden;
+}
+
+
+
