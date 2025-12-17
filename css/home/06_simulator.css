@@ -258,43 +258,61 @@
 
 
 
-
 /* ======================================
-   LOAN SIMULATOR — MOBILE OPTIMIZATION
-   À AJOUTER EN FIN DE FICHIER
+   LOAN SIMULATOR — MOBILE FULL-WIDTH PRO
+   (remplace tous les anciens media queries)
 ====================================== */
 
-/* ===== TABLET & MOBILE ===== */
 @media (max-width: 768px) {
 
+    /* SECTION */
     .loan-simulator {
-        padding: 4.5rem 1.5rem;
+        padding: 4rem 1rem;
     }
 
+    /* CONTAINER */
     .loan-simulator .container {
-        gap: 70px;
+        max-width: 100%;
+        gap: 56px;
     }
 
-    /* Simulator box */
+    /* SIMULATOR BOX */
     .simulator-box {
-        padding: 40px 32px;
-        border-radius: 24px;
+        width: 100%;
+        padding: 32px 20px;
+        border-radius: 18px;
+
+        justify-content: flex-start;
     }
 
+    /* FORM */
     .sim-form {
-        gap: 32px;
+        max-width: 100%;
+        gap: 26px;
     }
 
-    /* Labels & values */
+    /* FORM GROUP */
+    .form-group {
+        gap: 8px;
+    }
+
     .form-group label {
-        font-size: 14.5px;
+        font-size: 14px;
+        text-align: left;
     }
 
+    /* VALUE */
     .value-display {
-        font-size: 14.5px;
+        font-size: 14px;
+        text-align: right;
     }
 
-    /* Range thumb */
+    /* RANGE */
+    .form-group input[type="range"] {
+        height: 5px;
+    }
+
+    /* RANGE THUMB */
     .form-group input[type="range"]::-webkit-slider-thumb {
         width: 18px;
         height: 18px;
@@ -307,112 +325,53 @@
         border-width: 3px;
     }
 
-    /* Primary button */
+    /* CALCULATE BUTTON */
     .sim-form .btn-primary {
-        padding: 15px 44px;
-        font-size: 14.5px;
-    }
-
-    /* Result box */
-    .result-box {
-        padding: 40px 32px;
-        border-radius: 24px;
-        gap: 26px;
-    }
-
-    .result-box h3 {
-        font-size: 20px;
-    }
-
-    .result-box li {
-        font-size: 14.5px;
-    }
-}
-
-/* ===== SMALL MOBILE ===== */
-@media (max-width: 480px) {
-
-    .loan-simulator {
-        padding: 3.8rem 1.2rem;
-    }
-
-    .loan-simulator .container {
-        gap: 60px;
-    }
-
-    /* Header */
-    .sim-header h2 {
-        font-size: 21px;
-        letter-spacing: 1.5px;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 14px;
         text-align: center;
     }
 
-    .sim-header .section-line {
-        width: 34px;
+    /* NOTE */
+    .simulator-note {
+        font-size: 12.5px;
+        text-align: left;
     }
 
-    /* Simulator box */
-    .simulator-box {
-        padding: 32px 22px;
-    }
-
-    .sim-form {
-        gap: 28px;
-    }
-
-    /* Form group spacing */
-    .form-group {
-        gap: 10px;
-    }
-
-    .form-group label {
-        font-size: 14px;
-    }
-
-    .value-display {
-        font-size: 14px;
-    }
-
-    /* Button full width (thumb friendly) */
-    .sim-form .btn-primary {
-        width: 100%;
-        padding: 15px 20px;
-        font-size: 14px;
-    }
-
-    /* Result box */
+    /* RESULT BOX */
     .result-box {
-        padding: 32px 22px;
-        gap: 24px;
+        width: 100%;
+        max-width: 100%;
+        padding: 32px 20px;
+        border-radius: 18px;
+        gap: 22px;
     }
 
     .result-box h3 {
-        font-size: 19px;
+        font-size: 18px;
+        text-align: left;
     }
 
     .result-box ul {
-        gap: 16px;
+        gap: 14px;
     }
 
     .result-box li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
         font-size: 14px;
-        line-height: 1.5;
     }
 
-    /* Reset button full width */
+    /* RESET BUTTON */
     .result-box .btn-secondary {
         width: 100%;
-        padding: 14px 20px;
+        padding: 14px 0;
         font-size: 13.5px;
         text-align: center;
+        align-self: stretch;
     }
 }
-
-
-
-
-
-
-
 
 

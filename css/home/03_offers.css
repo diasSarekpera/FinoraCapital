@@ -190,197 +190,120 @@
     box-shadow: 0 18px 44px rgba(30, 58, 138, 0.35);
 }
 
-/* ==================================================
-   RESPONSIVE
-================================================== */
-
-@media (max-width: 900px) {
-    .offers-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
-    }
-
-    .offers-advantages {
-        gap: 26px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .offers-container {
-        grid-template-columns: 1fr;
-    }
-
-    .offers-header h2 {
-        font-size: 24px;
-    }
-
-    .offer-card {
-        padding: 40px 28px 44px;
-    }
-}
-
-
-
 
 
 /* ======================================
-   LOAN OFFERS — MOBILE REFINEMENT
-   À AJOUTER EN FIN DE FICHIER
+   LOAN OFFERS — MOBILE CLEAN & PRO
+   (remplace tous les anciens media queries)
 ====================================== */
 
-/* ===== TABLET & MOBILE ===== */
 @media (max-width: 768px) {
 
+    /* SECTION */
     .loan-offers {
-        padding: 4.5rem 1.5rem;
+        padding: 4rem 1rem;
     }
 
-    /* Offers grid */
+    /* GRID */
     .offers-container {
-        margin-bottom: 64px;
-        gap: 28px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+        margin-bottom: 48px;
     }
 
-    /* Offer card */
+    /* CARD */
     .offer-card {
-        padding: 42px 30px 44px;
-        border-radius: 24px;
+        width: 100%;
+        padding: 32px 22px 36px;
+        border-radius: 18px;
+
+        align-items: flex-start;
+        text-align: left;
     }
 
-    .offer-card h3 {
-        font-size: 20px;
-        margin-bottom: 16px;
-    }
-
-    /* Icon */
+    /* ICON */
     .offer-icon {
-        width: 72px;
-        height: 72px;
-        margin-bottom: 22px;
-    }
-
-    .offer-icon i {
-        font-size: 30px;
-    }
-
-    /* Details */
-    .offer-details {
-        gap: 10px;
-        margin-bottom: 26px;
-    }
-
-    .offer-details li {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    /* Card button */
-    .offer-card .btn-primary {
-        padding: 13px 32px;
-        font-size: 14px;
-    }
-
-    /* Advantages */
-    .offers-advantages {
-        margin-bottom: 64px;
-        gap: 22px;
-    }
-
-    .offers-advantages p {
-        font-size: 14px;
-    }
-
-    .check {
-        width: 20px;
-        height: 20px;
-        font-size: 11px;
-    }
-
-    /* CTA */
-    .offers-cta .btn-secondary {
-        padding: 15px 38px;
-        font-size: 14px;
-    }
-}
-
-/* ===== SMALL MOBILE ===== */
-@media (max-width: 480px) {
-
-    .loan-offers {
-        padding: 3.8rem 1.2rem;
-    }
-
-    /* Section header */
-    .loan-offers-header h2 {
-        font-size: 21px;
-        letter-spacing: 2px;
-        text-align: center;
-    }
-
-    .loan-offers-header .section-line {
-        width: 34px;
-    }
-
-    /* Offers grid */
-    .offers-container {
-        gap: 24px;
-        margin-bottom: 56px;
-    }
-
-    /* Offer card */
-    .offer-card {
-        padding: 36px 24px 40px;
-        border-radius: 22px;
-    }
-
-    /* Icon */
-    .offer-icon {
-        width: 64px;
-        height: 64px;
-        margin-bottom: 20px;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 18px;
     }
 
     .offer-icon i {
         font-size: 26px;
     }
 
-    /* Title */
+    /* TITLE */
     .offer-card h3 {
         font-size: 18px;
+        margin-bottom: 14px;
     }
 
-    /* Details */
+    /* DETAILS LIST */
+    .offer-details {
+        gap: 10px;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
     .offer-details li {
-        font-size: 13.5px;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
     }
 
-    /* Button full width */
+    /* BUTTON */
     .offer-card .btn-primary {
         width: 100%;
         text-align: center;
-        padding: 14px 20px;
+        padding: 14px 0;
+        font-size: 14px;
+        margin-top: 10px;
     }
 
-    /* Advantages stacked */
+    /* ADVANTAGES */
     .offers-advantages {
         flex-direction: column;
-        gap: 16px;
-        margin-bottom: 52px;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 48px;
+        padding: 0 4px;
     }
 
     .offers-advantages p {
-        justify-content: center;
-        font-size: 13.5px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: left;
     }
 
-    /* CTA full width */
+    /* CHECK ICON */
+    .check {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
+    /* CTA */
+    .offers-cta {
+        text-align: left;
+    }
+
     .offers-cta .btn-secondary {
         width: 100%;
-        padding: 15px 20px;
+        padding: 15px 0;
         font-size: 14px;
+        text-align: center;
+        padding: 16px 48px;
     }
 }
+
+
 
 
 
