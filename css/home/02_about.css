@@ -444,6 +444,36 @@
 
 
 
+/* ======================================
+   SECTION HEADER — MOBILE FIX
+====================================== */
+
+@media (max-width: 600px) {
+
+    .section-header {
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 60px;
+    }
+
+    .section-line {
+        width: 60px;
+        height: 2px;
+    }
+
+    .section-header h2 {
+        max-width: 100%;
+        text-align: center;
+        line-height: 1.25;
+        letter-spacing: 0.6px;
+        text-transform: none;
+    }
+
+    /* Ajustement du point décoratif */
+    .section-header h2::after {
+        bottom: -10px;
+    }
+}
 
 
 

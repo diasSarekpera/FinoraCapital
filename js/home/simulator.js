@@ -1,5 +1,5 @@
 // ===============================
-// LOAN SIMULATOR — SMART VERSION
+// LOAN SIMULATOR — EURO VERSION
 // ===============================
 
 // Inputs
@@ -26,18 +26,17 @@ const costEl = document.getElementById("cost");
 // Utils
 // ===============================
 function formatMoney(value) {
-    return value.toLocaleString("fr-FR") + " F";
+    return value.toLocaleString("fr-FR") + " €";
 }
 
 // ===============================
-// Auto rate by duration
+// Auto rate by duration (UE logic)
 // ===============================
 function getAutoRate(duration) {
-    if (duration <= 6) return 5;
-    if (duration <= 12) return 7;
-    if (duration <= 24) return 9;
-    if (duration <= 36) return 11;
-    return 14;
+    if (duration <= 24) return 5.5;
+    if (duration <= 36) return 7;
+    if (duration <= 60) return 9;
+    return 11.5;
 }
 
 // ===============================
@@ -48,9 +47,10 @@ function validateForm() {
     const duration = Number(durationInput.value);
 
     const isValid =
-        amount >= 50000 &&
-        duration >= 3 &&
-        duration <= 60;
+        amount >= 1000 &&
+        amount <= 150000 &&
+        duration >= 12 &&
+        duration <= 84;
 
     calculateBtn.disabled = !isValid;
 }
@@ -67,16 +67,16 @@ function updateDisplays() {
 
     amountValue.textContent = formatMoney(amount);
     durationValue.textContent = duration + " mois";
-    rateValue.textContent = autoRate + " %";
+    rateValue.textContent = autoRate + " % / an";
 
     validateForm();
 }
 
-// Initial state
+// Init
 updateDisplays();
 validateForm();
 
-// Live updates
+// Live update
 amountInput.addEventListener("input", updateDisplays);
 durationInput.addEventListener("input", updateDisplays);
 
@@ -108,7 +108,6 @@ calculateBtn.addEventListener("click", () => {
     totalEl.textContent = formatMoney(Math.round(totalPayment));
     costEl.textContent = formatMoney(Math.round(creditCost));
 
-    // Animation
     resultBox.style.display = "flex";
     requestAnimationFrame(() => {
         resultBox.classList.add("show");
