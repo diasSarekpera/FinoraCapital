@@ -140,6 +140,27 @@
 /* ==================================================
    RESULT BOX
 ================================================== */
+.result-box-container {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+/* Quand actif */
+.result-box-container.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .result-box {
     background: #ffffff;
@@ -147,7 +168,6 @@
     padding: 48px 46px;
 
     box-shadow: 0 30px 80px rgba(15, 23, 42, 0.08);
-    max-width: 620px;
     margin: 0 auto;
 
     display: flex;
@@ -339,6 +359,12 @@
         text-align: left;
     }
 
+
+    .result-box-container {
+        transform: translateY(10px);
+        padding: 2rem;
+    }
+
     /* RESULT BOX */
     .result-box {
         width: 100%;
@@ -375,3 +401,58 @@
 }
 
 
+/* ======================================
+   LOAN SIMULATOR — MOBILE RELAXED SPACING
+   (amélioration confort mobile)
+====================================== */
+
+@media (max-width: 768px) {
+
+    /* SECTION : moins de marge latérale */
+    .loan-simulator {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    /* CONTAINER : bord à bord maîtrisé */
+    .loan-simulator .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* SIMULATOR BOX : quasi full width */
+    .simulator-box {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* RESULT CONTAINER : on enlève l’effet “boîte autour” */
+    .result-box-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* RESULT BOX : respiration douce */
+    .result-box {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+/* ===== PETITS MOBILES (≤ 480px) ===== */
+@media (max-width: 480px) {
+
+    .loan-simulator {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .simulator-box,
+    .result-box {
+        border-radius: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

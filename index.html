@@ -485,7 +485,7 @@
                         </div>
 
                         <!-- Button -->
-                        <a  href="#resultBox" type="button" id="calculateBtn" class="btn-primary">
+                        <a  href="#result-box-container" type="button" id="calculateBtn" class="btn-primary">
                             Calculer ma mensualité
                         </a>
 
@@ -497,28 +497,31 @@
                 </div>
 
                 <!-- RESULT -->
-                <div class="result-box" id="resultBox" style="display:none;">
-                    <h3>Résultat de la simulation</h3>
-
-                    <ul>
-                        <li>
-                            <strong>Mensualité estimée :</strong>
-                            <span id="monthly">0 €</span>
-                        </li>
-                        <li>
-                            <strong>Montant total remboursé :</strong>
-                            <span id="total">0 €</span>
-                        </li>
-                        <li>
-                            <strong>Coût du crédit :</strong>
-                            <span id="cost">0 €</span>
-                        </li>
-                    </ul>
-
-                    <a  href="#loan-simulator" id="resetBtn" class="btn-secondary">
-                        Modifier la simulation
-                    </a>
+                <div id="result-box-container" class="result-box-container">
+                    <div class="result-box" id="resultBox">
+                        <h3>Résultat de la simulation</h3>
+    
+                        <ul>
+                            <li>
+                                <strong>Mensualité estimée :</strong>
+                                <span id="monthly">0 €</span>
+                            </li>
+                            <li>
+                                <strong>Montant total remboursé :</strong>
+                                <span id="total">0 €</span>
+                            </li>
+                            <li>
+                                <strong>Coût du crédit :</strong>
+                                <span id="cost">0 €</span>
+                            </li>
+                        </ul>
+    
+                        <a  href="#loan-simulator" id="resetBtn" class="btn-secondary">
+                            Modifier la simulation
+                        </a>
+                    </div>
                 </div>
+
 
             </div>
         </section>

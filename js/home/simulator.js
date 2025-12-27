@@ -13,6 +13,7 @@ const durationValue = document.getElementById("durationValue");
 const rateValue = document.getElementById("rateValue");
 
 // Buttons & Result
+const resultContainer = document.getElementById("result-box-container");
 const calculateBtn = document.getElementById("calculateBtn");
 const resetBtn = document.getElementById("resetBtn");
 const resultBox = document.getElementById("resultBox");
@@ -80,9 +81,6 @@ validateForm();
 amountInput.addEventListener("input", updateDisplays);
 durationInput.addEventListener("input", updateDisplays);
 
-// ===============================
-// Calculation
-// ===============================
 calculateBtn.addEventListener("click", () => {
     const amount = Number(amountInput.value);
     const duration = Number(durationInput.value);
@@ -108,18 +106,22 @@ calculateBtn.addEventListener("click", () => {
     totalEl.textContent = formatMoney(Math.round(totalPayment));
     costEl.textContent = formatMoney(Math.round(creditCost));
 
-    resultBox.style.display = "flex";
-    requestAnimationFrame(() => {
-        resultBox.classList.add("show");
+    // Affichage pro
+    resultContainer.classList.add("show");
+    resultBox.classList.add("show");
+
+    // Scroll doux vers le résultat
+    resultContainer.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
     });
 });
+
 
 // ===============================
 // Reset
 // ===============================
 resetBtn.addEventListener("click", () => {
     resultBox.classList.remove("show");
-    setTimeout(() => {
-        resultBox.style.display = "none";
-    }, 300);
+    resultContainer.classList.remove("show");
 });

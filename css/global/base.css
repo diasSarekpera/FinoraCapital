@@ -1,7 +1,7 @@
 /* ==================================================
    TYPOGRAPHY BASE
 ================================================== */
-
+/*
 body {
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -11,6 +11,16 @@ h2,
 .hero-title,
 .logo {
     font-family: "Libre Baskerville", serif;
+}
+*/
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 

@@ -118,11 +118,10 @@
 
 .about-title {
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.35;
     color: #0f172a;
     margin-bottom: 22px;
-    font-family: "Libre Baskerville", serif;
 }
 
 .about-text {
